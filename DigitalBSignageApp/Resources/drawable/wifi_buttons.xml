@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!--button pressed state background color-->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#2A2F36" />
+            <corners android:radius="8dp"/>
+        </shape>
+        <set xmlns:android="http://schemas.android.com/apk/res/android"
+             android:shareInterpolator="false">
+
+            <scale android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                   android:fromXScale = "1.0"
+                   android:toXScale = "1.9"
+                   android:fromYScale = "1.0"
+                   android:toYScale = "1.9"
+                   android:pivotX="50%"
+                   android:pivotY="50%"
+                   android:fillEnabled="true"
+                   android:fillAfter="false"
+                   android:duration="1000"/>
+        </set>
+    </item>
+    
+
+    <!--button focused state background color-->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#444B55" />
+            <corners android:radius="5dp"/>
+        </shape>
+
+    </item>
+
+    <!--button default background color-->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#212429" />
+            <corners android:radius="5dp"/>
+        </shape>
+    </item>
+</selector>

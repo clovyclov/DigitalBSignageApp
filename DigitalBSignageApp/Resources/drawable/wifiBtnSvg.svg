@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="118px" height="93px" viewBox="0 0 118 93" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>wifiBtnSvg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M60.05,92.45 L118.2,20 C115.95,18.3 93.55,0 60,0 C26.4,0 4.05,18.3 1.8,20 L59.95,92.45 L60,92.5 L60.05,92.45 L60.05,92.45 Z" id="path-1"></path>
+        <rect id="path-3" x="0" y="0" width="250" height="250"></rect>
+        <path d="M2.65,14.75 L44.95,67.45 L45,67.5 L45.05,67.45 L87.35,14.75 C85.2,13.1 69.05,0 45,0 C20.95,0 4.8,13.1 2.65,14.75 L2.65,14.75 Z" id="path-5"></path>
+        <rect id="path-7" x="0" y="0" width="250" height="250"></rect>
+    </defs>
+    <g id="Wireframes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-network-setup-2160p-landscape" transform="translate(-1747.000000, -1055.000000)">
+            <g id="network-select" transform="translate(1746.000000, 946.000000)">
+                <g id="Group" transform="translate(0.000000, 94.000000)">
+                    <g id="Group-4">
+                        <g id="wifiBtn">
+                            <g id="ic_network_wifi">
+                                <g id="Empty" opacity="0.3" transform="translate(0.000000, 15.000000)">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <g id="Mask"></g>
+                                    <g id="Colors/Black" mask="url(#mask-2)">
+                                        <g transform="translate(-65.000000, -80.000000)">
+                                            <mask id="mask-4" fill="white">
+                                                <use xlink:href="#path-3"></use>
+                                            </mask>
+                                            <use id="Black" stroke="none" fill="#000000" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="Filled" transform="translate(15.000000, 40.000000)">
+                                    <mask id="mask-6" fill="white">
+                                        <use xlink:href="#path-5"></use>
+                                    </mask>
+                                    <g id="Mask"></g>
+                                    <g id="Colors/Black" mask="url(#mask-6)">
+                                        <g transform="translate(-80.000000, -105.000000)">
+                                            <mask id="mask-8" fill="white">
+                                                <use xlink:href="#path-7"></use>
+                                            </mask>
+                                            <use id="Black" stroke="none" fill="#000000" fill-rule="evenodd" xlink:href="#path-7"></use>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

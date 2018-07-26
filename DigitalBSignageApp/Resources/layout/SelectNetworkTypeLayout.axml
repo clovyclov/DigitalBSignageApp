@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="40dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/selectNetworkBg">
+        <TextView
+            android:text="SELECT NETWORK TYPE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            android:textColor="#ffffffff" />
+        <TextView
+            android:id="@+id/currentConnStatus"
+            android:text="Current Connection Status:"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="#ffffffff" />
+        <LinearLayout
+            android:id="@+id/seletNetwork"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/wifiBtn"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/wifiBtnStates"
+                android:layout_margin="24dp" />
+            <Button
+                android:id="@+id/lanBtn"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/ethernetBtnStates"
+                android:layout_margin="24dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

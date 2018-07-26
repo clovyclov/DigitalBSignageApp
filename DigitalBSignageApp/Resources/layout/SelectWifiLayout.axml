@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/engage"
+        android:weightSum="4"
+        android:padding="40dp">
+    <!--    INNER CONTENT    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout1">
+            <Button
+                android:id="@+id/btnEnterManually"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Enter Manually" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#ffd9d9d9"
+                android:text="2.4 GHz"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#ffffffff"
+                android:textSize="48sp"
+                android:text="Select Wi-Fi Network Name"
+                android:id="@+id/wifiNetworkName" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#ffd9d9d9"
+                android:text="Protected"
+                android:textSize="16sp" />
+        </LinearLayout>
+    <!--PUT RECYCLER IN THIS
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wifiSSID"
+            android:padding="20dp"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        </LinearLayout>-->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+            <GridView
+                android:id="@+id/wifiGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnWidth="300dp"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="2dp"
+                android:stretchMode="columnWidth"
+                android:clickable="true"
+                android:gravity="center" />
+        </ScrollView>
+    <!--<HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp">
+        
+        </HorizontalScrollView>-->
+    <!--<android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerWifi"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="horizontal"
+            android:clickable="true"
+            android:layout_weight="1" />-->
+    <!--<HorizontalScrollView
+                android:id="@+id/horizontalScrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <Button
+                        android:id="@+id/wifiSSID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="Private Wifi"
+                        android:background="@drawable/wifi_buttons"
+                        android:textColor="@android:color/white"
+                        android:width="300dp"
+                        android:height="200dp"
+                        android:layout_marginRight="20dp"
+                        android:stateListAnimator="@anim/button_rise" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="PrivateWifi Guest"
+                        android:textColor="@android:color/white"
+                        android:width="300dp"
+                        android:height="200dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/wifi_buttons"
+                        android:stateListAnimator="@anim/button_rise" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="Eview360_Wifi"
+                        android:textColor="@android:color/white"
+                        android:width="300dp"
+                        android:height="200dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/wifi_buttons" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="PrivateWifi Guest"
+                        android:textColor="@android:color/white"
+                        android:width="300dp"
+                        android:height="200dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/wifi_buttons" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="Eview360_Wifi"
+                        android:textColor="@android:color/white"
+                        android:width="300dp"
+                        android:height="200dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/wifi_buttons" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="PrivateWifi Guest"
+                        android:textColor="@android:color/white"
+                        android:width="300dp"
+                        android:height="200dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/wifi_buttons" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="Eview360_Wifi"
+                        android:textColor="@android:color/white"
+                        android:width="300dp"
+                        android:height="200dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/wifi_buttons" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>-->
+    </LinearLayout>
+</LinearLayout>
