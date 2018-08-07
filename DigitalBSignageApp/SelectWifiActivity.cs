@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.Net.Wifi;
 using Android.OS;
 using Android.Runtime;
@@ -15,6 +16,7 @@ using Android.Views;
 using Android.Widget;
 using Java.Interop;
 using Java.Lang;
+using static Android.App.ActionBar;
 
 namespace DigitalBSignageApp
 {
@@ -24,11 +26,6 @@ namespace DigitalBSignageApp
     [Activity(Label = "SelectWifiActivity", MainLauncher = false)]
     public class SelectWifiActivity : Activity
     {
-
-        /// <summary>
-        /// TO SCOTT: Remember to bring in the RecyclerView package from Nuget!!!
-        /// </summary>
-
         WifiSSIDList WifiSSIDList;
         Android.Support.V7.Widget.RecyclerView wifiRecyclerView;
         RecyclerView.LayoutManager wifiLayoutManager;
@@ -42,12 +39,6 @@ namespace DigitalBSignageApp
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.SelectWifiLayout);
 
-            //wifiManager = Application.Context.GetSystemService(Context.WifiService) as WifiManager;
-            //wifiManager.StartScan();
-            //IList<ScanResult> scanResults = wifiManager.ScanResults;
-
-
-
             wifiNetworkName = FindViewById<TextView>(Resource.Id.wifiNetworkName);
 
             var scannedResults = Intent.GetStringArrayListExtra("wifiScanResults");
@@ -56,6 +47,30 @@ namespace DigitalBSignageApp
             foreach (var result in scannedResults)
             {
                 WifiGridAdapter.testStrings.Add(result);
+
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(300, 200);
+                lp.SetMargins(0, 20, 20, 20);
+
+                Button button = new Button(this);
+                button.SetBackgroundResource(Resource.Drawable.wifi_buttons);
+                button.SetTextColor(Color.White);
+                button.Text = result;
+                button.LayoutParameters = lp;
+
+                button.SetPadding(0,5,10,5);
+
+                button.Click += delegate (object sender, EventArgs e)
+                {
+                    Button btn = (Button)sender;
+                    Toast.MakeText(this, btn.Text, ToastLength.Short).Show();
+                    Intent intent = new Intent(this, typeof(EnterWifiPassActivity));
+                    intent.SetFlags(ActivityFlags.NewTask);
+                    intent.PutExtra("PassedWifiName", btn.Text);
+                    StartActivity(intent);
+                };
+
+                LinearLayout ll = (LinearLayout)FindViewById(Resource.Id.wifiBtnContainer);
+                ll.AddView(button);
             }
 
             GridView gridView = FindViewById<GridView>(Resource.Id.wifiGrid);
@@ -66,44 +81,8 @@ namespace DigitalBSignageApp
 
                 wifiNetworkName.Text = "Manual Wifi Clicked";
             };
-
-            //WifiSSIDList = new WifiSSIDList();
-
-            //wifiRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerWifi);
-
-
-            ////Set layout manager
-            //wifiLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.Horizontal, false);
-            //wifiRecyclerView.SetLayoutManager(wifiLayoutManager);
-
-            ////Set adapter
-            //wifiListAdapter = new WifiListAdapter(networks);
-
-            //wifiListAdapter.ItemClick += OnItemClick;
-
-            //wifiRecyclerView.SetAdapter(wifiListAdapter);
-
-
-            //int counter = 0;
-            //for (var i = 0; i < wifiRecyclerView.ChildCount; i++)
-            //{
-            //    counter++;
-            //}
-
-
         }
 
-
-        void OnItemClick(object sender, int position)
-        {
-            //var view = (TextView)sender;
-            //Button viewBtn = (Button)sender;
-            //Toast.MakeText(this, $"You clicked number {position}. Also {viewBtn.Texthang}", ToastLength.Short).Show();
-            StartActivity(typeof(EnterWifiPassActivity));
-            //wifiNetworkName.Text = "Worked!";
-            int wifiNum = position + 1;
-
-        }
     }
 
     public class WifiGridAdapter : BaseAdapter

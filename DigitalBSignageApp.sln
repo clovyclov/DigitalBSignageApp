@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalBSignageApp", "DigitalBSignageApp\DigitalBSignageApp.csproj", "{B717B5FE-7A92-47F5-A90B-EFE8539356D9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recycler", "Recycler", "{41D736F8-8F20-4D5F-BA17-DCCFEF39BDA8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Old Process", "Old Process", "{693BC5F1-5511-43FC-8DEB-19A4FEAD748E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecyclerViewer", "..\..\Downloads\RecyclerViewer\RecyclerViewer\RecyclerViewer.csproj", "{C7F5D818-C203-47A2-AFB4-60078932730E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalBProcess", "..\DigitalBProcess\DigitalBProcess\DigitalBProcess.csproj", "{3AC50AA7-0002-4C2A-BDB8-616075D25058}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +17,12 @@ Global
 		{B717B5FE-7A92-47F5-A90B-EFE8539356D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B717B5FE-7A92-47F5-A90B-EFE8539356D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B717B5FE-7A92-47F5-A90B-EFE8539356D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7F5D818-C203-47A2-AFB4-60078932730E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7F5D818-C203-47A2-AFB4-60078932730E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7F5D818-C203-47A2-AFB4-60078932730E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7F5D818-C203-47A2-AFB4-60078932730E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC50AA7-0002-4C2A-BDB8-616075D25058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC50AA7-0002-4C2A-BDB8-616075D25058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC50AA7-0002-4C2A-BDB8-616075D25058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC50AA7-0002-4C2A-BDB8-616075D25058}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C7F5D818-C203-47A2-AFB4-60078932730E} = {41D736F8-8F20-4D5F-BA17-DCCFEF39BDA8}
+		{3AC50AA7-0002-4C2A-BDB8-616075D25058} = {693BC5F1-5511-43FC-8DEB-19A4FEAD748E}
 	EndGlobalSection
 EndGlobal

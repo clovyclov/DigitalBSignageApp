@@ -38,7 +38,5 @@ namespace DigitalBSignageApp
         {
             ScanList = ScanResults;
         }
-
-
     }
 }

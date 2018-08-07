@@ -62,22 +62,42 @@
             android:orientation="vertical">
 
         </LinearLayout>-->
-        <ScrollView
-            android:id="@+id/scrollView"
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
             android:layout_width="match_parent"
-            android:layout_height="500dp">
-            <GridView
-                android:id="@+id/wifiGrid"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/wifiBtnContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:columnWidth="300dp"
-                android:numColumns="auto_fit"
-                android:verticalSpacing="10dp"
-                android:horizontalSpacing="2dp"
-                android:stretchMode="columnWidth"
-                android:clickable="true"
-                android:gravity="center" />
-        </ScrollView>
+                android:layout_weight="1"
+                android:padding="5dp" />
+        </HorizontalScrollView>
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:visibility="gone"
+            android:isScrollContainer="true"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/wifiBtnContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+                <GridView
+                    android:id="@+id/wifiGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="300dp"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="10dp"
+                    android:horizontalSpacing="2dp"
+                    android:stretchMode="columnWidth"
+                    android:clickable="true"
+                    android:gravity="center" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
     <!--<HorizontalScrollView
             android:id="@+id/horizontalScrollView1"
             android:layout_width="fill_parent"

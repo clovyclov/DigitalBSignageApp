@@ -2,4 +2,11 @@
 <resources>
     <string name="hello">Hello World, Click Me!</string>
     <string name="app_name">DigitalB Signage App</string>
+    <!--<string name="at_sign">\U+0040</string>
+    <string name="question_mark">\U+003F</string>-->
+<!--    <string name="at_sign">&#64;</string>-->
+    <string name="at_sign">\@</string>
+
+<!--    <string name="question_mark">&#63;</string>-->
+    <string name="question_mark"><![CDATA[&#63;]]></string>
 </resources>

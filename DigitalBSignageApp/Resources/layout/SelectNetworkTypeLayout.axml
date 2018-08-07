@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -8,12 +8,13 @@
     android:gravity="center"
     android:padding="40dp">
     <LinearLayout
+        android:id="@+id/mainBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical"
-        android:background="@drawable/selectNetworkBg">
+        android:background="@drawable/digitalbbackground02">
         <TextView
             android:text="SELECT NETWORK TYPE"
             android:layout_width="wrap_content"
@@ -51,4 +52,45 @@
                 android:layout_margin="24dp" />
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/bottomNotch"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/notch_states"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:maxHeight="100dp">
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:clickable="false"
+            android:layout_alignParentTop="true"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bee_icon"
+            android:maxHeight="100dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bottomNotchLower"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="@android:color/white"
+        android:background="#333"
+        android:layout_below="@id/bottomNotch"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:text="Bottom notch Content" />
+    </RelativeLayout>
+</RelativeLayout>

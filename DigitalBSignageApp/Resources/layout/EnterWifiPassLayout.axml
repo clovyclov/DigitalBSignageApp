@@ -2,12 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/enterWifiLayout"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:padding="40dp">
     <LinearLayout
+        android:id="@+id/passwordLinear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -15,6 +17,7 @@
         android:orientation="vertical"
         android:background="@drawable/selectNetworkBg">
         <LinearLayout
+            android:id="@+id/passwordElements"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -30,6 +33,7 @@
                 android:layout_marginBottom="24dp"
                 android:text="PrivateWifi" />
             <LinearLayout
+                android:id="@+id/passTxtViews"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -43,234 +47,1799 @@
                     android:textSize="24sp"
                     android:fontFamily="sans-serif-light"
                     android:text="Password:" />
-                <EditText
+                <TextView
                     android:id="@+id/enterWifiPassword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#444B55"
-                    android:inputType="textPassword"
                     android:textSize="24sp" />
             </LinearLayout>
+            <Button
+                android:id="@+id/connBtn"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Connect To Wifi" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/keyboardKeysMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="bottom"
+        android:visibility="visible"
+        android:orientation="vertical"
         android:layout_alignParentBottom="true">
-        <GridLayout
+    <!--ROW 1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom"
+            android:id="@+id/linearLayout2">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:id="@+id/button14" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button15" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="6"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="7"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="8"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="9"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DEL"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="BackBtnPressed"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+        </LinearLayout>
+    <!--Row 2-->
+        <LinearLayout
             android:id="@+id/gridLayoutKeys"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:rowCount="5"
-            android:columnCount="11"
+            android:padding="10dp"
             android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
             android:layout_gravity="bottom">
-        <!-- ROW 1 -->
-            <TextView
-                android:text="1"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:layout_marginBottom="20dp"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="2"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="3"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="4"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="5"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="6"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="7"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="8"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="9"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="0"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="BACK"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-        <!--ROW 2-->
-            <TextView
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="q"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 android:textAlignment="center"
-                android:layout_marginBottom="20dp"
-                android:textColor="@android:color/white" />
-            <TextView
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="w"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="e"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="r"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="t"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="y"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="u"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
                 android:textColor="@android:color/white"
-                android:id="@+id/textView2" />
-            <TextView
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="i"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="o"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="p"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:text="\@" />
+        </LinearLayout>
+    <!--Row 3-->
+        <LinearLayout
+            android:id="@+id/gridLayoutKeys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="a"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="s"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="d"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="f"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="g"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="h"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="j"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="k"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="l"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:text=":"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:text="\'"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+        </LinearLayout>
+    <!--Row 4-->
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:text="Caps"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_special_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="CapsBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/CapsButtonMain" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="z"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="x"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="c"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="v"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="b"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="n"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="m"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:text="SHIFT"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_special_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ShiftBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+        </LinearLayout>
+    <!--Row 5-->
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
             <TextView
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:padding="10dp"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:text="AT" />
-        <!--ROW 3-->
-            <TextView
-                android:text="a"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:onClick="SpaceBtn"
+                android:layout_margin="5dp"
+                android:layout_marginTop="0dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:text="SPACE"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="0dp"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
+                android:background="@android:color/white"
+                android:textColor="#333"
+                android:onClick="SpaceBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
             <TextView
-                android:text="s"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:padding="10dp"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="d"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="f"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="g"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="h"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="j"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="k"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="l"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="_"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-            <TextView
-                android:text="&amp;"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
-        </GridLayout>
+                android:textColor="@android:color/white"
+                android:onClick="SpaceBtn"
+                android:layout_margin="5dp"
+                android:layout_marginTop="0dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+        </LinearLayout>
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/keyboardKeysMainLowered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+    <!--ROW 1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom"
+            android:id="@+id/linearLayout2">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:id="@+id/button14" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button15" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="6"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="7"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="8"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="9"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DEL"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="BackBtnPressed"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+        </LinearLayout>
+    <!--Row 2-->
+        <LinearLayout
+            android:id="@+id/gridLayoutKeys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="q"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="w"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="e"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="r"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="t"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="y"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="u"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="i"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="o"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="p"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:clickable="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:text="\@" />
+        </LinearLayout>
+    <!--Row 3-->
+        <LinearLayout
+            android:id="@+id/gridLayoutKeys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="a"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="s"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="d"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="f"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="g"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="h"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="j"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="k"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="l"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:text=":"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:text="\'"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+        </LinearLayout>
+    <!--Row 4-->
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
+            <Button
+                android:id="@+id/CapsButtonSecondary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:text="Caps"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_special_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="CapsBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="z"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="x"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="c"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="v"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="b"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="n"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="m"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:text="SHIFT"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_special_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ShiftBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+        </LinearLayout>
+    <!--Row 5-->
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:clickable="false"
+                android:textColor="@android:color/white"
+                android:onClick="SpaceBtn"
+                android:layout_margin="5dp"
+                android:layout_marginTop="0dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:text="SPACE"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="0dp"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_special_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="SpaceBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:clickable="false"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:onClick="SpaceBtn"
+                android:layout_margin="5dp"
+                android:layout_marginTop="0dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+<!--End of Keyboard-->
+    <LinearLayout
+        android:id="@+id/keyboardKeysSecondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom"
+            android:id="@+id/linearLayout2">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:id="@+id/button14" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button15" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="6"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="7"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="8"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="9"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DEL"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="BackBtnPressed"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="!"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/at_sign"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="#"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="$"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button17" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="%"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button18" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="^"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button19" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&amp;"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button20" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="*"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button21" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="("
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button22" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button23"
+                android:text=")" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DEL"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="BackBtnPressed"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button24" />
+        </LinearLayout>
+    <!--Row 2-->
+        <LinearLayout
+            android:id="@+id/gridLayoutKeys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:id="@+id/button25" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="_"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="+"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:layout_marginLeft="0.0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="="
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=":"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=";"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="'"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="i"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="["
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="]"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:text="|" />
+        </LinearLayout>
+    <!--Row 3-->
+    <!--Row 4-->
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="~"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="`"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="`"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="\?"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&lt;"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&gt;"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&quot;"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=","
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="{"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="}"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button1" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="\\"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ChangeText"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:id="@+id/button2" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#5B717B"
+            app:useDefaultMargins="false"
+            app:alignmentMode="alignBounds"
+            android:layout_gravity="bottom">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SHIFT"
+                android:layout_margin="5dp"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_special_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="ShiftBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SPACE"
+                android:layout_margin="5dp"
+                android:textSize="12sp"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/keyboard_special_buttons"
+                android:textColor="@android:color/white"
+                android:onClick="SpaceBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+<!--End of Keyboard-->
 </RelativeLayout>

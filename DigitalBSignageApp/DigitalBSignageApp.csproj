@@ -106,6 +106,7 @@
     <Reference Include="Xamarin.Android.Support.v7.CardView">
       <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.CardView.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Android.Export" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -115,10 +116,12 @@
     <Compile Include="Person.cs" />
     <Compile Include="WifiSSIDList.cs" />
     <Compile Include="WifiListAdapter.cs" />
-    <Compile Include="SelectNetworkActivity.cs" />
     <Compile Include="ScanningWifiActivity.cs" />
     <Compile Include="EnterWifiPassActivity.cs" />
     <Compile Include="BootActivity.cs" />
+    <Compile Include="KeyboardView.cs" />
+    <Compile Include="Resources\drawable\SelectNetworkActivity.cs" />
+    <Compile Include="RemoteTutorialActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -149,7 +152,6 @@
     <AndroidResource Include="Resources\layout\SelectNetworkTypeLayout.axml" />
     <AndroidResource Include="Resources\drawable\lanBtn.png" />
     <AndroidResource Include="Resources\drawable\wifiBtn.png" />
-    <AndroidResource Include="Resources\drawable\wifiBtnSvg.svg" />
     <AndroidResource Include="Resources\drawable\wifiBtnStates.xml" />
     <AndroidResource Include="Resources\drawable\ethernetDefault.png" />
     <AndroidResource Include="Resources\drawable\ethernetFocus.png" />
@@ -165,10 +167,23 @@
     <AndroidResource Include="Resources\drawable\wifiicon.xml" />
     <AndroidResource Include="Resources\layout\BootLayout.axml" />
     <AndroidResource Include="Resources\layout\GetStartedLayout.axml" />
+    <AndroidResource Include="Resources\layout\KeyboardModuleLayout.axml" />
+    <AndroidResource Include="Resources\drawable\keyboard_popup.xml" />
+    <AndroidResource Include="Resources\drawable\keyboard_buttons.xml" />
+    <AndroidResource Include="Resources\drawable\digitalbbackground02.webp" />
+    <AndroidResource Include="Resources\drawable\green_notch.png" />
+    <AndroidResource Include="Resources\drawable\grey_notch.png" />
+    <AndroidResource Include="Resources\drawable\grey_notch_default.png" />
+    <AndroidResource Include="Resources\drawable\notch_states.xml" />
+    <AndroidResource Include="Resources\drawable\bee_icon.png" />
+    <AndroidResource Include="Resources\drawable\keyboard_special_buttons.xml" />
+    <AndroidResource Include="Resources\drawable\db_remote_tutorial.png" />
+    <AndroidResource Include="Resources\layout\remoteTutorialLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\anim\" />
+    <Folder Include="Resources\xml\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\data.json" />
@@ -178,6 +193,7 @@
     <AndroidAsset Include="Assets\digitalb-animation-v5.json" />
     <AndroidAsset Include="Assets\opening-boot-animation-v1.json" />
     <AndroidAsset Include="Assets\opening-boot-animation-v2.json" />
+    <AndroidAsset Include="Assets\opening-boot-animation-20180801-v1.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
